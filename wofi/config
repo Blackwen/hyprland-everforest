@@ -1,0 +1,31 @@
+#
+# ██╗    ██╗ ██████╗ ███████╗██╗
+# ██║    ██║██╔═══██╗██╔════╝██║
+# ██║ █╗ ██║██║   ██║█████╗  ██║
+# ██║███╗██║██║   ██║██╔══╝  ██║
+# ╚███╔███╔╝╚██████╔╝██║     ██║
+#  ╚══╝╚══╝  ╚═════╝ ╚═╝     ╚═╝
+#
+# Wofi Config File by Arfan Zubi
+#	https://github.com/3rfaan/arch-everforest
+#
+#	Edited by VinKon
+#	https://github.com/Blackwen/hyprland-everforest
+#
+
+show=drun
+width=25%
+height=24%
+prompt=Search....
+normal_window=false
+location=center
+gtk-dark=true
+allow_images=true
+image_size=32
+insensitive=true
+allow_markup=true
+no_actions=true
+orientation=vertical
+#orientation=horizontal
+halign=fill
+content_halign=fill
