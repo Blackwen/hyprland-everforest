@@ -1,0 +1,107 @@
+* {
+	font-family: "Jetbrains Mono";
+	font-size: 9pt;
+	font-weight: normal;
+	border-radius: 0px;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+}
+
+@keyframes blink_red {
+	to {
+		background-color: rgb(242, 143, 173);
+		color: rgb(26, 24, 38);
+	}
+}
+
+.warning,
+.critical,
+.urgent {
+	animation-name: blink_red;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+window#waybar {
+	background-color: #1b1b1b;
+}
+
+window>box {
+	margin-left: 2px;
+	margin-right: 0px;
+	padding: 0px 0px;
+	background-color: transparent;
+}
+
+#workspaces {
+	padding-right: 0px;
+}
+
+#workspaces button {
+	color: rgb(217, 224, 238);
+	margin-right: 0px;
+}
+
+#workspaces button.active {
+	color: #f1f1f1;
+	background: #1f2324;
+}
+
+#workspaces button.urgent {
+	color: #f3f3f3;
+}
+
+#workspaces button:hover {
+	background-color: #1f2124;
+	color: #f3f3f3;
+}
+
+tooltip {
+	background: #1b1b1b;
+}
+
+tooltip label {
+	color: rgb(217, 224, 238);
+}
+
+#clock,
+#backlight,
+#pulseaudio,
+#network,
+#battery {
+	font-size: 13px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#clock {
+	color: rgb(217, 224, 238);
+}
+
+#backlight {
+	color: #c6bda2;
+}
+
+#pulseaudio {
+	color: #a5bec6;
+}
+
+#network {
+	color: #a2a8c6;
+}
+
+#network.disconnected {
+	color: rgb(255, 255, 255);
+}
+
+#battery.charging,
+#battery.full,
+#battery.discharging {
+	color: #c6a2a2;
+}
+
+#battery.critical:not(.charging) {
+	color: rgb(136, 152, 176);
+}
