@@ -9,7 +9,7 @@
 
 @keyframes blink_red {
 	to {
-		background-color: rgb(242, 143, 173);
+		background-color: rgb(242, 143, 172);
 		color: rgb(26, 24, 38);
 	}
 }
@@ -25,7 +25,7 @@
 }
 
 window#waybar {
-	background-color: #1b1b1b;
+	background-color: #1e2326;
 }
 
 window>box {
@@ -45,7 +45,7 @@ window>box {
 }
 
 #workspaces button.active {
-	color: #f1f1f1;
+	color: #A7C080;
 	background: #1f2324;
 }
 
@@ -77,15 +77,15 @@ tooltip label {
 }
 
 #clock {
-	color: rgb(217, 224, 238);
+	color: #83C092;
 }
 
 #backlight {
-	color: #c6bda2;
+	color: #D3C6AB;
 }
 
 #pulseaudio {
-	color: #a5bec6;
+	color: #E69875;
 }
 
 #network {
@@ -96,10 +96,12 @@ tooltip label {
 	color: rgb(255, 255, 255);
 }
 
-#battery.charging,
+#battery.charging {
+		color: #83C092;
+}
 #battery.full,
 #battery.discharging {
-	color: #c6a2a2;
+	color: #E67E80;
 }
 
 #battery.critical:not(.charging) {
