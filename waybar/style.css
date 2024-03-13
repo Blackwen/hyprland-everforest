@@ -107,3 +107,10 @@ tooltip label {
 #battery.critical:not(.charging) {
 	color: rgb(136, 152, 176);
 }
+
+#custom-spotify {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: #1DB954;
+    color: black;
+}
