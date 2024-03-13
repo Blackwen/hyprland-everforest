@@ -3,7 +3,7 @@
   "layer": "top",
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["custom/spotify"],
+  "modules-center": [""],
   "modules-right": ["custom/spotify","backlight", "pulseaudio", "network", "battery", "clock", "tray"],
         "custom/cava-internal": {
           "tooltip": true,
@@ -23,10 +23,18 @@
             "8": "[8]",
             "9": "[9]",
             "10": "[10]",
-            "default": " ",
-          },
+            "default": " "
+          }
         },
-        "backlight": {
+       	"custom/spotify": {
+    "exec": "/usr/bin/python3 ~/.config/waybar/script/mediaplayer.py --player spotify",
+    "format": "[󰓇 {}]",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+},
+				"backlight": {
           "device": "intel_backlight",
           "on-scroll-up": "light -A 5",
           "on-scroll-down": "light -U 5",
@@ -65,25 +73,17 @@
         "clock": {
           "interval": 1,
           "format": "[󰥔 {:%I:%M %p}]",
-          "format-alt": "[󰥔 {:%I:%M %p | %A %b %d}]", 
+          "format-alt": "[󰥔 {:%I:%M %p |  %A %b %d}]", 
 					"tooltip": true,
-          "tooltip-format": "<tt>{calendar}</tt>",
+          "tooltip-format": "<tt>{calendar}</tt>"
         },
-				"custom/spotify": {
-    "exec": "/usr/bin/python3 ~/.config/wayabr/script/spotify.py --player spotify",
-    "format": "{}  ",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
-},
-        "network": {
+			        "network": {
           "format-disconnected": "[󰤨 Disconnected]",
           "format-ethernet": "[󰤨 {ifname} ({ipaddr})]",
           "format-linked": "[󰤨 {essid} (No IP)]",
           "format-wifi": "[󰤨 {essid}]",
           "interval": 1,
-          "tooltip": false,
+          "tooltip": false
         },
 				"tray": {
     "icon-size": 16,
